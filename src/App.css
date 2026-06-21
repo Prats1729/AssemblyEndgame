@@ -1,10 +1,107 @@
 body{
   background-color: #282726;
+  color: #F9F4DA;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
 
 .main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.game-status {
+  height: 60px;
+  width: 100%;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.game-status.won {
+  background-color: #10A95B;
+  color: white;
+}
+
+.game-status.lost {
+  background-color: #BA2A2A;
+  color: white;
+}
+
+.word-display {
+  display: flex;
+  gap: 10px;
+  margin: 40px 0;
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.word-display span {
+  width: 40px;
+  height: 40px;
+  border-bottom: 2px solid #F9F4DA;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.word-display span.missed {
+  color: #BA2A2A;
+}
+
+.keyboard {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.keyboard button {
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  border: 1px solid #FCDBB6;
+  background-color: #FCDBB6;
+  color: #282726;
+  font-weight: bold;
+  font-size: 1.2rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.2s;
+}
+
+.keyboard button:hover:not(:disabled) {
+  opacity: 0.8;
+}
+
+.keyboard button.correct {
+  background-color: #10A95B;
+  border-color: #10A95B;
+  color: white;
+}
+
+.keyboard button.wrong {
+  background-color: #BA2A2A;
+  border-color: #BA2A2A;
+  color: white;
+}
+
+.new-game {
+  padding: 10px 40px;
+  background-color: #11BEEB;
+  color: #282726;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  cursor: pointer;
 }

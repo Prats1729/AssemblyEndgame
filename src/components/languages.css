@@ -1,4 +1,4 @@
-.lang-Sec{
+.lang-Sec {
     display: flex;
     flex-wrap: wrap;
     gap: 3px;
@@ -7,10 +7,21 @@
     width: 400px;
 }
 
-
-
 .lang-card {
     border-radius: 4px;
     padding: 8px;
+    position: relative;
+}
 
+.lang-card.lost {
+    opacity: 0.3;
+}
+
+.lang-card.lost::after {
+    content: "❌";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem;
 }

@@ -1,6 +1,6 @@
 import "./languages.css"
 
-const langs = [
+export const langs = [
   {
     name: "HTML",
     color: "#E2680F",
@@ -48,17 +48,24 @@ const langs = [
   },
 ];
 
-export default function LangSection() {
-  return <div className="lang-Sec">
-  {langs.map((lang) => {
-    return (
-      <div className="lang-card"
-        style={{
-          backgroundColor: lang.color,
-          color: lang.textColor,
-        }}> 
-        {lang.name}
-      </div>
-    )
-  })}</div>;
+export default function LangSection({ wrongGuessCount }) {
+  return (
+    <div className="lang-Sec">
+      {langs.map((lang, index) => {
+        const isLost = index < wrongGuessCount;
+        return (
+          <div
+            key={lang.name}
+            className={`lang-card ${isLost ? "lost" : ""}`}
+            style={{
+              backgroundColor: lang.color,
+              color: lang.textColor,
+            }}
+          >
+            {lang.name}
+          </div>
+        );
+      })}
+    </div>
+  );
 }
