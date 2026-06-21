@@ -1,16 +1,42 @@
-# React + Vite
+# Assembly Endgame
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A fun, hangman-style word guessing game built with React! In this game, instead of building a hangman, you must guess the word correctly to save various programming languages from being eliminated. For every wrong guess, a language "dies". 
 
-Currently, two official plugins are available:
+This was built as a capstone project for the Scrimba React Course.
+## Screenshot
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+![screenshot](chrome_ECsZ4QYvzS.png)
 
-## React Compiler
+## Features
+- **Dynamic Keyboard**: Interactive A-Z keyboard that updates visually (green for correct guesses, red for wrong guesses).
+- **Game Logic**: Win and loss detection with celebratory/game-over status banners.
+- **Language Health**: A list of programming languages that cross themselves out as the player makes incorrect guesses.
+- **Randomized Words**: Words are chosen randomly from a tech-focused dictionary.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tech Stack
+- **React** (Hooks: `useState`)
+- **CSS3** (Flexbox, Dynamic styling)
+- **Vite** 
 
-## Expanding the ESLint configuration
+## Running Locally
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. Clone the repository:
+   ```bash
+   git clone <your-repo-url>
+   ```
+2. Navigate into the directory:
+   ```bash
+   cd AssemblyEndgame
+   ```
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
+4. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+## Preview
+
+Try to guess the word before Assembly is eliminated!
