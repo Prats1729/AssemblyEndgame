@@ -1,4 +1,16 @@
 .lang-Sec{
     display: flex;
-    gap: 20px;
+    flex-wrap: wrap;
+    gap: 3px;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+}
+
+
+
+.lang-card {
+    border-radius: 4px;
+    padding: 8px;
+
 }
